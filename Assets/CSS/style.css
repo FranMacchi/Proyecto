@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* === TEXTOS === */
+p {
+    color: blue;
+    font-size: 20px;
+    margin: 20px 35px;
+    line-height: 1.5;
+}
+
+h1 { 
+    font-size: 50px;
+    color: #222;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    color: rgb(100, 0, 50); /* Corregido: antes había un valor inválido (0.5) */
+    text-align: center;
+    font-size: 32px;
+}
+
+/* === LISTAS === */
+li {
+    font-size: 22px;
+    color: blueviolet;
+}
+
+/* === NAVEGACIÓN === */
+header {
+    background-color: #ffe5b4;
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.menu-nav {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu-nav a:hover {
+    color: #c0392b;
+}
+
+/* === SECCIONES PRINCIPALES === */
+.presentacion {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.presentacion img {
+    width: 80%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* === LISTA DE PRODUCTOS === */
+.lista-productos {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    margin: 40px;
+}
+
+.lista-productos li {
+    text-align: center;
+}
+
+.lista-productos a {
+    display: block; /* el enlace ocupa toda la línea, queda encima de la imagen */
+    font-size: 24px;
+    color: #8a2be2;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.lista-productos a:hover {
+    color: #5e1fa6;
+}
+
+.lista-productos img {
+    width: 220px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.lista-productos img:hover {
+    transform: scale(1.05);
+}
+
+/* === FOOTER === */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
