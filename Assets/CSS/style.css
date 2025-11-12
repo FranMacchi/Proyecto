@@ -6,7 +6,6 @@ body {
     color: #333;
 }
 
-/* === TEXTOS === */
 p {
     color: blue;
     font-size: 20px;
@@ -22,18 +21,16 @@ h1 {
 }
 
 h2 {
-    color: rgb(100, 0, 50); /* Corregido: antes había un valor inválido (0.5) */
+    color: rgb(100, 0, 50); 
     text-align: center;
     font-size: 32px;
 }
 
-/* === LISTAS === */
 li {
     font-size: 22px;
     color: blueviolet;
 }
 
-/* === NAVEGACIÓN === */
 header {
     background-color: #ffe5b4;
     padding: 15px 0;
@@ -60,7 +57,6 @@ header {
     color: #c0392b;
 }
 
-/* === SECCIONES PRINCIPALES === */
 .presentacion {
     text-align: center;
     margin: 40px 0;
@@ -73,7 +69,6 @@ header {
     border-radius: 12px;
 }
 
-/* === LISTA DE PRODUCTOS === */
 .lista-productos {
     list-style: none;
     display: flex;
@@ -89,7 +84,7 @@ header {
 }
 
 .lista-productos a {
-    display: block; /* el enlace ocupa toda la línea, queda encima de la imagen */
+    display: block; 
     font-size: 24px;
     color: #8a2be2;
     text-decoration: none;
@@ -112,7 +107,7 @@ header {
     transform: scale(1.05);
 }
 
-/* === FOOTER === */
+                    /* se agrega footer*/
 footer {
     background-color: #222;
     color: #fff;
@@ -120,4 +115,234 @@ footer {
     padding: 15px 0;
     margin-top: 40px;
     font-size: 14px;
+}
+/* aca comienza el grid en la pagina inicio para 3 columnas 3 filas para dar diiseño a las imagenes y el parrafo renombrado texto grid */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, auto);   
+    gap: 20px;
+    padding: 40px;
+    justify-items: center;
+    align-items: center;
+    background-color: #fff8f0;
+    border-radius: 12px;
+    margin: 40px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+/* aca las imagenes como galeria grid en el index.html */
+.galeria-grid .item img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.galeria-grid .item img:hover {
+    transform: scale(1.05);
+}
+
+                                                        /* texto */
+.galeria-grid .texto-grid {
+    grid-column: span 3; 
+    text-align: center;
+}
+
+.galeria-grid .texto-grid p {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-top: 20px;
+    line-height: 1.6;
+    font-weight: bold;
+}
+.galeria-flex {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 20px; 
+    flex-wrap: wrap; 
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.galeria-flex img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.galeria-flex img:hover {
+    transform: scale(1.05);
+}
+                             /* flex box para que el titulo H3 quede centrado con las imagenes */
+.productos article {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    text-align: center;    
+    margin-bottom: 40px;
+}
+
+.productos h3 {
+    font-size: 26px;
+    color: #8a2be2;
+    margin-bottom: 15px;
+}
+                          /* aca aplico box model para las imagenes de la pagina inicio para dar formato */
+.inicio .lista-productos img {
+    border: 3px solid #d8bfd8;      
+    border-radius: 12px;            
+    padding: 10px;                  
+    background-color: #fff;         
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.inicio .lista-productos img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+                               /* aparites de aca se realizaran las vistas para celular & talbet */
+
+                                                    /* tablets */
+@media (max-width: 1024px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 15px 25px;
+    }
+
+    .menu-nav {
+        gap: 15px;
+    }
+
+    .lista-productos img,
+    .galeria-flex img {
+        width: 200px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .galeria-grid .texto-grid {
+        grid-column: span 2; 
+    }
+}
+
+                                                    /* Celulares */
+@media (max-width: 600px) {
+
+    header {
+        padding: 10px 0;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+        margin: 10px 15px;
+    }
+
+                                                     /* para menu de navegacion en columna */
+    .menu-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu-nav a {
+        font-size: 18px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .galeria-grid .texto-grid {
+        grid-column: 1;
+    }
+
+    .galeria-flex {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .galeria-flex img {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    .lista-productos {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        gap: 25px;
+    }
+
+    .lista-productos img {
+        width: 80%;
+        max-width: 280px;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 10px 0;
+    }
+}
+                                                /* desde aca se realizara el menu hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-nav {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #ffe5b4;
+        gap: 10px;
+        padding: 10px 0;
+        position: absolute;
+        top: 70px; 
+        left: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .menu-nav.show {
+        display: flex; 
+    }
+
+    .menu-nav li a {
+        font-size: 20px;
+        padding: 10px 0;
+    }
 }

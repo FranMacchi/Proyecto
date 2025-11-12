@@ -3,32 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <link rel="stylesheet" href="../assets/css/style.css">
-    
-    <title>Cocinero Glotón</title>
-    
+    <title>Cocinero Glotón - Carnes</title>
 </head>
 <body>
-    <a href="../index.html">Volver a home</a>  
-    <head>
-    
-        <h1>Carnes</h1>
 
-    </head>
+    <header>
+        <h1>La web del Cocinero Glotón</h1>
+        <nav> <!-- se agrega barra de navegacion y hambuguesa para moviles/tablet -->
+            <div class="menu-toggle" id="menu-toggle">
+                &#9776; 
+            </div>
 
-<h2>Lomo</h2>
-<h3>$2.100</h3>
-<img src="../assets/img/carne2.jpg" alt="lomo"/>
+            <ul class="menu-nav" id="menu-nav">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="quien-soy.html">¿Quién soy?</a></li>
+            <li><a href="carnes.html">Carnes</a></li>
+            <li><a href="pastas.html">Pastas</a></li>
+            <li><a href="postres.html">Postres</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<h2>Pollo</h2>
-<h3>$1.500</h3>
-<img src="../assets/img/carne3.jpg" alt="pollo"/>
+    <main>
+        <section class="productos"> <!-- se lo identifca para el flex box en el css-->
+            <h2>Carnes</h2>
 
-<h2>Pesca del dia</h2>
-<h3>$1.900</h3>
-<img src="../assets/img/carne4.jpg" alt="pesca-del-dia"/>
+            <article>
+                <h3>Res - $2.100</h3>
+                    <div class="galeria-flex"> <!-- se lo identifca para el flex box en el css-->
+                        <img src="../assets/img/res1.jpg" alt="Lomo principal">
+                        <img src="../assets/img/res2.jpg" alt="Lomo con hueso">
+                        <img src="../assets/img/carne2.jpg" alt="Lomo lonjas">
+                    </div>
+            </article>
 
+            <article>
+                <h3>Pollo - $1.500</h3>
+                    <div class="galeria-flex">
+                        <img src="../assets/img/pollo2.jpg" alt="Pollo pomarola">
+                        <img src="../assets/img/pollo3.jpg" alt="Pechuga">
+                        <img src="../assets/img/carne3.jpg" alt="Pollo parrilla">
+                    </div>
+            </article>
+
+            <article>
+                <h3>Pesca del día - $1.900</h3>
+                    <div class="galeria-flex">
+                        <img src="../assets/img/carne4.jpg" alt="Pesca blanca">
+                        <img src="../assets/img/pescado2.jpg" alt="Pesca entera">
+                        <img src="../assets/img/pescado3.jpg" alt="Pesca rosada">
+                    </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto Coderhouse Desarrollo web 2025</p>
+    </footer>
 
 </body>
-</html> 
+</html>
